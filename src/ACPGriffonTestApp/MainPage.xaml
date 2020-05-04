@@ -4,6 +4,7 @@
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="20,35,20,20">
                 <!--ACPCore methods-->
+                <Label Text="ACPCore" />
                 <Button Text="ACPCore Extension Version" BackgroundColor="LightGray" Clicked="OnCoreExtensionVersionButtonClicked"/>
                 <Button Text="Get Privacy Status" BackgroundColor="LightGray" Clicked="OnGetPrivacyStatusButtonClicked"/>
                 <Button Text="Set Advertising Identifier" BackgroundColor="LightGray" Clicked="OnSetAdvertisingIdentifierButtonClicked"/>
@@ -13,9 +14,10 @@
                 <Button Text="Track State" BackgroundColor="LightGray" Clicked="OnTrackStateButtonClicked"/>
                 <Button Text="Update Configuration" BackgroundColor="LightGray" Clicked="OnUpdateConfigurationButtonClicked"/>
                 <!--ACPGriffon methods-->
+                <Label Text="ACPGriffon" />
                 <Button Text="ACPGriffon Extension Version" BackgroundColor="LightGray" Clicked="OnGriffonExtensionVersionButtonClicked"/>
                 <Label Text="Enter session URL" />
-                <Entry Text="acpgriffontestapp://link?adb_validation_sessionid=2f3a02a0-b990-49c0-904f-0e237942b22a" TextChanged="OnEntryTextChanged" Completed="OnEntryCompleted" ClearButtonVisibility="WhileEditing" Keyboard="Url"/>
+                <Entry Placeholder="acpgriffontestapp://link?" TextChanged="OnEntryTextChanged" Completed="OnEntryCompleted" ClearButtonVisibility="WhileEditing" Keyboard="Url"/>
                 <Button Text="Start Session" BackgroundColor="LightGray" Clicked="OnStartSessionButtonClicked"/>
             </StackLayout>
         </ScrollView>

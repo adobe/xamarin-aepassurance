@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Foundation;
+using Android.Runtime;
 using Com.Adobe.Marketing.Mobile;
 
-namespace ACPGriffonTestApp.iOS
+namespace ACPGriffonTestApp.Droid
 {
     public class ACPGriffonExtensionService : IACPGriffonExtensionService
     {
@@ -19,15 +19,14 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> GetExtensionVersionCore()
         {
             stringOutput = new TaskCompletionSource<string>();
-            stringOutput.SetResult(ACPCore.ExtensionVersion);
+            stringOutput.SetResult(ACPCore.ExtensionVersion());
             return stringOutput;
         }
 
         public TaskCompletionSource<string> GetPrivacyStatus()
         {
             stringOutput = new TaskCompletionSource<string>();
-            Action<ACPMobilePrivacyStatus> callback = new Action<ACPMobilePrivacyStatus>(handleCallback);
-            ACPCore.GetPrivacyStatus(callback);
+            ACPCore.GetPrivacyStatus(new StringCallback());
             stringOutput.SetResult("completed");
             return stringOutput;
         }
@@ -43,7 +42,7 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> SetLogLevel()
         {
             stringOutput = new TaskCompletionSource<string>();
-            ACPCore.LogLevel = ACPMobileLogLevel.Verbose;
+            ACPCore.LogLevel = LoggingMode.Verbose;
             stringOutput.SetResult("completed");
             return stringOutput;
         }
@@ -51,7 +50,7 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> SetPrivacyStatus()
         {
             stringOutput = new TaskCompletionSource<string>();
-            ACPCore.SetPrivacyStatus(ACPMobilePrivacyStatus.OptIn);
+            ACPCore.SetPrivacyStatus(MobilePrivacyStatus.OptIn);
             stringOutput.SetResult("completed");
             return stringOutput;
         }
@@ -59,10 +58,8 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> TrackAction()
         {
             stringOutput = new TaskCompletionSource<string>();
-            var data = new NSMutableDictionary<NSString, NSString>
-            {
-                ["key"] = new NSString("value")
-            };
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            data.Add("key", "value");
             ACPCore.TrackAction("action", data);
             stringOutput.SetResult("completed");
             return stringOutput;
@@ -71,10 +68,8 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> TrackState()
         {
             stringOutput = new TaskCompletionSource<string>();
-            var data = new NSMutableDictionary<NSString, NSString>
-            {
-                ["key"] = new NSString("value")
-            };
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            data.Add("key", "value");
             ACPCore.TrackState("state", data);
             stringOutput.SetResult("completed");
             return stringOutput;
@@ -83,11 +78,9 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> UpdateConfig()
         {
             stringOutput = new TaskCompletionSource<string>();
-            var config = new NSMutableDictionary<NSString, NSObject>
-            {
-                ["someConfigKey"] = new NSString("configValue"),
-                ["analytics.batchLimit"] = new NSNumber(5)
-            };
+            Dictionary<string, Java.Lang.Object> config = new Dictionary<string, Java.Lang.Object>();
+            config.Add("someConfigKey", "configValue");
+            config.Add("analytics.batchLimit", 5);
             ACPCore.UpdateConfiguration(config);
             stringOutput.SetResult("completed");
             return stringOutput;
@@ -97,17 +90,16 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> GetExtensionVersionGriffon()
         {
             stringOutput = new TaskCompletionSource<string>();
-            stringOutput.SetResult(ACPGriffon.ExtensionVersion);
+            stringOutput.SetResult(ACPGriffon.ExtensionVersion());
             return stringOutput;
         }
 
         public TaskCompletionSource<string> StartSession()
         {
             stringOutput = new TaskCompletionSource<string>();
-            if(sessionUrl.Length > 0)
+            if (sessionUrl.Length > 0)
             {
-                NSUrl url = new NSUrl(sessionUrl);
-                ACPGriffon.StartSession(url);
+                ACPGriffon.StartSession(sessionUrl);
             }
             else
             {
@@ -124,23 +116,20 @@ namespace ACPGriffonTestApp.iOS
         }
 
         // callbacks
-        private void handleCallback(ACPMobilePrivacyStatus privacyStatus)
+        class StringCallback : Java.Lang.Object, IAdobeCallback
         {
-            Console.WriteLine("Privacy status: " + privacyStatus.ToString());
-        }
-
-        private void handleCallback(NSString content)
-        {
-            if (content == null)
+            public void Call(Java.Lang.Object stringContent)
             {
-                Console.WriteLine("String callback is null");
-            }
-            else
-            {
-                Console.WriteLine("String callback: " + content);
+                if (stringContent != null)
+                {
+                    Console.WriteLine("String callback content: " + stringContent);
+                }
+                else
+                {
+                    Console.WriteLine("null content in string callback");
+                }
             }
         }
-
     }
 
 }

@@ -51,8 +51,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
-    <Reference Include="ACPCore.XamarinAndroidBinding">
-      <HintPath>..\Adobe.ACPGriffon.Android\Bindings\ACPCore.XamarinAndroidBinding.dll</HintPath>
+    <Reference Include="Adobe.ACPIdentity.Android">
+      <HintPath>Bindings\Adobe.ACPIdentity.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Adobe.ACPLifecycle.Android">
+      <HintPath>Bindings\Adobe.ACPLifecycle.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Adobe.ACPCore.Android">
+      <HintPath>..\Adobe.ACPGriffon.Android\Bindings\Adobe.ACPCore.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +69,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ACPGriffonExtensionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -89,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACPGriffonTestApp\ACPGriffonTestApp.csproj">

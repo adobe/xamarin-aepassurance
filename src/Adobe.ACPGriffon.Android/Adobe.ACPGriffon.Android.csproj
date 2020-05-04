@@ -56,8 +56,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="ACPCore.XamarinAndroidBinding">
-      <HintPath>Bindings\ACPCore.XamarinAndroidBinding.dll</HintPath>
+    <Reference Include="Adobe.ACPCore.Android">
+      <HintPath>Bindings\Adobe.ACPCore.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
