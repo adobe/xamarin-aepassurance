@@ -335,8 +335,6 @@ ASALocalRun/
 HelloXamarin/HelloXamarin/Resources/Resource.designer.cs
 
 # Generated .txt "readme" files
-src/ACPGriffon.XamarinAndroidBinding/Additions/AboutAdditions.txt
-src/ACPGriffon.XamarinAndroidBinding/Jars/AboutJars.txt
 src/Adobe.ACPGriffon.Android/Additions/AboutAdditions.txt
 src/Adobe.ACPGriffon.Android/Jars/AboutJars.txt
 src/ACPGriffonTestApp.Android/Assets/AboutAssets.txt
