@@ -16,7 +16,7 @@ namespace ACPGriffonTestApp.Droid
         public void Call(Java.Lang.Object callback)
         {
             // set launch config
-            ACPCore.ConfigureWithAppID("launch-ENf8ed5382efc84d5b81a9be8dcc231be1-development");
+            ACPCore.ConfigureWithAppID("94f571f308d5/00fc543a60e1/launch-c861fab912f7-development");
         }
     }
 
