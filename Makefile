@@ -18,7 +18,7 @@ clean: msbuild-clean clean-folders setup
 
 # Makes ACPGriffon bindings and NuGet package. The binding (.dll) will be available in BindingDirectory/bin/Debug
 # The NuGet package is created in the same directory but then moved to src/bin.
-all:
+release:
 	cd src/Adobe.ACPGriffon.Android/ && msbuild -t:pack
 	cd src/Adobe.ACPGriffon.iOS/ && msbuild -t:build	
 	mkdir bin
