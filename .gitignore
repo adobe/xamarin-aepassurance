@@ -339,3 +339,5 @@ src/Adobe.ACPGriffon.Android/Additions/AboutAdditions.txt
 src/Adobe.ACPGriffon.Android/Jars/AboutJars.txt
 src/ACPGriffonTestApp.Android/Assets/AboutAssets.txt
 src/ACPGriffonTestApp.Android/Resources/AboutResources.txt
+src/ACPGriffonAndroidUnitTests/Assets/AboutAssets.txt
+src/ACPGriffonAndroidUnitTests/Resources/AboutResources.txt
