@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ACPGriffonTestApp.MainPage">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="20,35,20,20">
+                <!--ACPCore methods-->
+                <Label Text="ACPCore" />
+                <Button Text="ACPCore Extension Version" BackgroundColor="LightGray" Clicked="OnCoreExtensionVersionButtonClicked"/>
+                <Button Text="Get Privacy Status" BackgroundColor="LightGray" Clicked="OnGetPrivacyStatusButtonClicked"/>
+                <Button Text="Set Advertising Identifier" BackgroundColor="LightGray" Clicked="OnSetAdvertisingIdentifierButtonClicked"/>
+                <Button Text="Set Log Level" BackgroundColor="LightGray" Clicked="OnSetLogLevelButtonClicked"/>
+                <Button Text="Set Privacy Status" BackgroundColor="LightGray" Clicked="OnSetPrivacyStatusButtonClicked"/>
+                <Button Text="Track Action" BackgroundColor="LightGray" Clicked="OnTrackActionButtonClicked"/>
+                <Button Text="Track State" BackgroundColor="LightGray" Clicked="OnTrackStateButtonClicked"/>
+                <Button Text="Update Configuration" BackgroundColor="LightGray" Clicked="OnUpdateConfigurationButtonClicked"/>
+                <!--ACPGriffon methods-->
+                <Label Text="ACPGriffon" />
+                <Button Text="ACPGriffon Extension Version" BackgroundColor="LightGray" Clicked="OnGriffonExtensionVersionButtonClicked"/>
+                <Label Text="Enter session URL" />
+                <Entry Placeholder="acpgriffontestapp://link?" TextChanged="OnEntryTextChanged" Completed="OnEntryCompleted" ClearButtonVisibility="WhileEditing" Keyboard="Url"/>
+                <Button Text="Start Session" BackgroundColor="LightGray" Clicked="OnStartSessionButtonClicked"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
