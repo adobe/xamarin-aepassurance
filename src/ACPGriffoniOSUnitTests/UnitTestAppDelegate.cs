@@ -55,15 +55,13 @@ namespace ACPGriffoniOSUnitTests
 
             // setup for all tests
             CountdownEvent latch = new CountdownEvent(1);
-            ACPCore.SetWrapperType(ACPMobileWrapperType.Xamarin);
             ACPCore.LogLevel = ACPMobileLogLevel.Verbose;
             ACPGriffon.RegisterExtension();
 
             // start core
             ACPCore.Start(() =>
             {
-                // set config from launch (org: OBUMobile5, app: ryan-xamarin)
-                ACPCore.ConfigureWithAppId("94f571f308d5/00fc543a60e1/launch-c861fab912f7-development");
+                ACPCore.ConfigureWithAppID("94f571f308d5/00fc543a60e1/launch-c861fab912f7-development");
                 latch.Signal();
             });
             latch.Wait();
