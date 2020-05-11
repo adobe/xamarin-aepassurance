@@ -100,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACPGriffonTestApp\ACPGriffonTestApp.csproj">
-      <Project>{3C874DB6-EA8E-44C2-AB86-3CB770A9A4A1}</Project>
+      <Project>{77060535-4B4D-431B-AB9C-242ECE34960A}</Project>
       <Name>ACPGriffonTestApp</Name>
     </ProjectReference>
     <ProjectReference Include="..\Adobe.ACPGriffon.Android\Adobe.ACPGriffon.Android.csproj">
