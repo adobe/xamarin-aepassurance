@@ -2,4 +2,6 @@
 <metadata>
 <!-- Use ACPGriffon for Xamarin plugin name -->
   <attr path="/api/package[@name='com.adobe.marketing.mobile']/class[@name='Griffon']" name="managedName">ACPGriffon</attr>
+<!-- Make GriffonEvent private -->
+<attr path="/api/package[@name='com.adobe.marketing.mobile']/class[@name='GriffonEvent']" name="visibility">private</attr>
 </metadata>
