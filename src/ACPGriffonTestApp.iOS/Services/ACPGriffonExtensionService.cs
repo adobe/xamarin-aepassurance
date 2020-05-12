@@ -19,7 +19,7 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> GetExtensionVersionCore()
         {
             stringOutput = new TaskCompletionSource<string>();
-            stringOutput.SetResult(ACPCore.ExtensionVersion);
+            stringOutput.SetResult(ACPCore.ExtensionVersion());
             return stringOutput;
         }
 
@@ -97,7 +97,7 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> GetExtensionVersionGriffon()
         {
             stringOutput = new TaskCompletionSource<string>();
-            stringOutput.SetResult(ACPGriffon.ExtensionVersion);
+            stringOutput.SetResult(ACPGriffon.ExtensionVersion());
             return stringOutput;
         }
 
