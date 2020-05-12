@@ -1,7 +1,7 @@
 # Adobe Experience Platform - Griffon plugin for Xamarin apps
 
 [![CI](https://github.com/adobe/xamarin-acpgriffon/workflows/CI/badge.svg)](https://github.com/adobe/xamarin-acpgriffon/actions)
-[![npm](https://img.shields.io/npm/v/@adobe/xamarin-acpgriffon)](https://www.npmjs.com/package/@adobe/xamarin-acpgriffon)
+
 [![GitHub](https://img.shields.io/github/license/adobe/xamarin-acpgriffon)](https://github.com/adobe/xamarin-acpgriffon/blob/master/LICENSE)
 
 - [Prerequisites](#prerequisites)
@@ -38,7 +38,7 @@ followed by:
 make release
 ```
 
-The created NuGet packages can be found in the `bin` directory and can be added as reference to a Xamarin project.
+The created NuGet packages can be found in the `bin` directory and can be added as a reference to a Xamarin project.
 
 ## Usage
 ### [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
@@ -50,23 +50,13 @@ The following usage instructions assume [Xamarin Forms](https://dotnet.microsoft
 **iOS**
 
 ```c#
-public TaskCompletionSource<string> GetExtensionVersionGriffon()
-{
-  stringOutput = new TaskCompletionSource<string>();
-  stringOutput.SetResult(ACPGriffon.ExtensionVersion);
-  return stringOutput;
-}
+Console.WriteLine(ACPGriffon.ExtensionVersion);
 ```
 
 **Android**
 
 ```c#
-public TaskCompletionSource<string> GetExtensionVersionGriffon()
-{
-  stringOutput = new TaskCompletionSource<string>();
-  stringOutput.SetResult(ACPGriffon.ExtensionVersion());
-  return stringOutput;
-}
+Console.WriteLine(ACPGriffon.ExtensionVersion());
 ```
 
 ##### Registering the extension with ACPCore:  
@@ -85,26 +75,14 @@ ACPCore.Start(null);
 **iOS**
 
 ```c#
-public TaskCompletionSource<string> StartSession()
-{
-  stringOutput = new TaskCompletionSource<string>();
-  NSUrl url = new NSUrl("acpgriffontestapp://link?adb_validation_sessionid=session_id");
-	ACPGriffon.StartSession(url);
-  stringOutput.SetResult("");
-  return stringOutput;
-}
+NSUrl url = new NSUrl("acpgriffontestapp://link?adb_validation_sessionid=session_id");
+ACPGriffon.StartSession(url);
 ```
 
 **Android**
 
 ```c#
-public TaskCompletionSource<string> StartSession()
-{
-  stringOutput = new TaskCompletionSource<string>();
-	ACPGriffon.StartSession("acpgriffontestapp://link?adb_validation_sessionid=session_id");
-  stringOutput.SetResult("");
-  return stringOutput;
-}
+ACPGriffon.StartSession("acpgriffontestapp://link?adb_validation_sessionid=session_id");
 ```
 
 ## Running Tests
