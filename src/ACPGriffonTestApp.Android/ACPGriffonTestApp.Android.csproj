@@ -73,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +96,7 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Services\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACPGriffonTestApp\ACPGriffonTestApp.csproj">
