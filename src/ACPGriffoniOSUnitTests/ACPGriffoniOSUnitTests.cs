@@ -23,7 +23,7 @@ namespace ACPGriffoniOSUnitTests
         public void GetACPGriffonExtensionVersion_Returns_CorrectVersion()
         {
             // verify
-            Assert.That(ACPGriffon.ExtensionVersion, Is.EqualTo("1.1.0"));
+            Assert.That(ACPGriffon.ExtensionVersion(), Is.EqualTo("1.1.0"));
         }
     }
 }

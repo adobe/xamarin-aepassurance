@@ -47,13 +47,7 @@ The following usage instructions assume [Xamarin Forms](https://dotnet.microsoft
 
 ##### Getting Griffon version:
 
-**iOS**
-
-```c#
-Console.WriteLine(ACPGriffon.ExtensionVersion);
-```
-
-**Android**
+**iOS and Android**
 
 ```c#
 Console.WriteLine(ACPGriffon.ExtensionVersion());
