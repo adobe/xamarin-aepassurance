@@ -65,13 +65,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="ACPCore.framework">
-      <Kind>Framework</Kind>
-      <ForceLoad>True</ForceLoad>
-      <IsCxx>True</IsCxx>
-      <LinkerFlags>-lc++ -lsqlite3 -lz</LinkerFlags>
-      <Frameworks>UIKit SystemConfiguration WebKit UserNotifications</Frameworks>
-    </NativeReference>
     <NativeReference Include="ACPGriffon.framework">
       <Kind>Framework</Kind>
       <ForceLoad>True</ForceLoad>
@@ -79,19 +72,16 @@
       <Frameworks>UIKit SystemConfiguration</Frameworks>
       <LinkerFlags>-lc++ -lz</LinkerFlags>
     </NativeReference>
-    <NativeReference Include="libACPCore_iOS.a">
-      <Kind>Static</Kind>
-      <ForceLoad>True</ForceLoad>
-      <IsCxx>True</IsCxx>
-      <Frameworks>UIKit SystemConfiguration WebKit UserNotifications</Frameworks>
-      <LinkerFlags>-lc++ -lsqlite3 -lz</LinkerFlags>
-    </NativeReference>
     <NativeReference Include="libACPGriffon_iOS.a">
       <Kind>Static</Kind>
       <ForceLoad>True</ForceLoad>
       <IsCxx>True</IsCxx>
       <Frameworks>UIKit SystemConfiguration</Frameworks>
       <LinkerFlags>-lc++ -lz</LinkerFlags>
+    </NativeReference>
+    <NativeReference Include="libACPCore_iOS.a">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />

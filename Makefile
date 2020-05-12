@@ -22,6 +22,6 @@ release:
 	cd src/Adobe.ACPGriffon.Android/ && msbuild -t:pack
 	cd src/Adobe.ACPGriffon.iOS/ && msbuild -t:build	
 	mkdir bin
-	cp src/Adobe.ACPGriffon.Android//bin/Debug/*.nupkg ./bin
+	cp src/Adobe.ACPGriffon.Android/bin/Debug/*.nupkg ./bin
 	cp src/Adobe.ACPGriffon.iOS/bin/Debug/*.nupkg ./bin
 	

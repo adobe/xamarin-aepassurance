@@ -1,7 +1,7 @@
 # Adobe Experience Platform - Griffon plugin for Xamarin apps
 
 [![CI](https://github.com/adobe/xamarin-acpgriffon/workflows/CI/badge.svg)](https://github.com/adobe/xamarin-acpgriffon/actions)
-[![npm](https://img.shields.io/npm/v/@adobe/xamarin-acpgriffon)](https://www.npmjs.com/package/@adobe/xamarin-acpgriffon)
+
 [![GitHub](https://img.shields.io/github/license/adobe/xamarin-acpgriffon)](https://github.com/adobe/xamarin-acpgriffon/blob/master/LICENSE)
 
 - [Prerequisites](#prerequisites)
@@ -12,74 +12,86 @@
 - [Contributing](#contributing)
 - [Licensing](#licensing)
 
-# TODO: update me for xamarin
-
 ## Prerequisites
 
-Cordova is distributed via [Node Package Management](https://www.npmjs.com/) (aka - `npm`).  
+Xamarin development requires the installation of [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/). An Apple developer account and the latest version of Xcode (available from the App Store) are required if you are [building an iOS app](https://docs.microsoft.com/en-us/visualstudio/mac/installation?view=vsmac-2019).
 
-In order to install and build Cordova applications you will need to have `Node.js` installed. [Install Node.js](https://nodejs.org/en/).  
-
-Once Node.js is installed, you can install the Cordova framework from terminal:  
-
-```  
-sudo npm install -g cordova  
-```  
 ## Installation
 
-To start using the AEP SDK for Cordova, navigate to the directory of your Cordova app and install the plugin:
+# TODO (update after NuGet package is available on nuget.org)
+
+**Package Manager Installation**
+
+TODO
+
+**Manual installation**
+
+A local ACPGriffon NuGet package can be created via the included Makefile. If building for the first time, run:
+
 ```
-cordova plugin add https://github.com/adobe/cordova-acpgriffon.git
+make setup
 ```
-Check out the documentation for help with APIs
+
+followed by:
+
+```
+make release
+```
+
+The created NuGet packages can be found in the `bin` directory and can be added as a reference to a Xamarin project.
 
 ## Usage
 ### [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 
-##### Getting the SDK version:
-```js
-ACPGriffon.extensionVersion(function(version){  
-  console.log(version);
-}, function(error){  
-  console.log(error);  
-});
-```
-##### Registering the extension with ACPCore:
+The following usage instructions assume [Xamarin Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms) is being used to develop a multiplatform mobile app.
 
-> Note: It is required to initialize the SDK via native code inside your AppDelegate and MainApplication for iOS and Android respectively. For more information see how to initialize [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon/set-up-project-griffon#add-project-griffon-extension-to-your-app).
-#####  **iOS**
-```objective-c
-#import "ACPGriffon.h"  
-[ACPGriffon registerExtension];
+##### Getting Griffon version:
+
+**iOS**
+
+```c#
+Console.WriteLine(ACPGriffon.ExtensionVersion);
 ```
-#####  **Android:**
-```java
-import com.adobe.marketing.mobile.Griffon;
-Griffon.registerExtension();
+
+**Android**
+
+```c#
+Console.WriteLine(ACPGriffon.ExtensionVersion());
 ```
+
+##### Registering the extension with ACPCore:  
+
+  ##### **iOS** and Android
+
+```c#
+using Com.Adobe.Marketing.Mobile;
+
+ACPGriffon.RegisterExtension();
+ACPCore.Start(null);
+```
+
 ##### Starting the Griffon session:
-```js
-ACPGriffon.startSession(url, function(response) {  
-  console.log("Success in starting Griffon session");  
-}, function(error){  
-  console.log(error);  
-});
+
+**iOS**
+
+```c#
+NSUrl url = new NSUrl("acpgriffontestapp://link?adb_validation_sessionid=session_id");
+ACPGriffon.StartSession(url);
+```
+
+**Android**
+
+```c#
+ACPGriffon.StartSession("acpgriffontestapp://link?adb_validation_sessionid=session_id");
 ```
 
 ## Running Tests
-Install cordova-paramedic `https://github.com/apache/cordova-paramedic`
-```bash
-npm install -g cordova-paramedic
-```
-Run the tests
-```
-cordova-paramedic --platform ios --plugin . --verbose
-```
-```
-cordova-paramedic --platform android --plugin . --verbose
-```
+
+iOS and Android unit tests are included within the ACPGriffon binding solution. Currently they must be built from within Visual Studio then manually triggered from the unit test app that is deployed to an iOS or Android device.
+
 ## Sample App
-A Cordova app for testing the plugin is located in the `https://github.com/adobe/cordova-acpsample`. The app is configured for both iOS and Android platforms.
+
+A Xamarin Forms sample app is provided in the Xamarin ACPAnalytics solution file.Sample App
 
 ## Contributing
 
