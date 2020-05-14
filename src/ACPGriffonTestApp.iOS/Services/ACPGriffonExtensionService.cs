@@ -37,7 +37,7 @@ namespace ACPGriffonTestApp.iOS
         public TaskCompletionSource<string> GetPrivacyStatus()
         {
             stringOutput = new TaskCompletionSource<string>();
-            Action<ACPMobilePrivacyStatus> callback = new Action<ACPMobilePrivacyStatus>(handleCallback);
+            var callback = new Action<ACPMobilePrivacyStatus>(handleCallback);
             ACPCore.GetPrivacyStatus(callback);
             stringOutput.SetResult("completed");
             return stringOutput;

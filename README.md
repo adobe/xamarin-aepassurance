@@ -85,7 +85,7 @@ iOS and Android unit tests are included within the ACPGriffon binding solution. 
 
 ## Sample App
 
-A Xamarin Forms sample app is provided in the Xamarin ACPAnalytics solution file.Sample App
+A Xamarin Forms sample app is provided in the Xamarin ACPGriffon solution file.
 
 ## Contributing
 

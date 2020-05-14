@@ -82,7 +82,7 @@ namespace ACPGriffonTestApp.iOS
         private void startCallback()
         {
             // set launch config
-            ACPCore.ConfigureWithAppId("launch-ENf8ed5382efc84d5b81a9be8dcc231be1-development");
+            ACPCore.ConfigureWithAppID("launch-ENf8ed5382efc84d5b81a9be8dcc231be1-development");
         }
     }
 }

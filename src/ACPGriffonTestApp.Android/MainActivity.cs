@@ -77,7 +77,6 @@ namespace ACPGriffonTestApp.Droid
         protected override void OnResume()
         {
             base.OnResume();
-            ACPCore.Application = this.Application;
             ACPCore.LifecycleStart(null);
         }
 
