@@ -1,6 +1,6 @@
 # Adobe Experience Platform - Griffon plugin for Xamarin apps
 
-![CI](https://github.com/adobe/xamarin-acpgriffon/workflows/CI%20on%20push%20and%20pull/badge.svg)
+![CI](https://github.com/adobe/xamarin-acpgriffon/workflows/CI/badge.svg)
 
 [![GitHub](https://img.shields.io/github/license/adobe/xamarin-acpgriffon)](https://github.com/adobe/xamarin-acpgriffon/blob/master/LICENSE)
 
