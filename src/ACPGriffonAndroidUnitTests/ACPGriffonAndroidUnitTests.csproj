@@ -48,9 +48,6 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Xamarin.Android.NUnitLite" />
-    <Reference Include="Adobe.ACPCore.Android">
-      <HintPath>..\Adobe.ACPGriffon.Android\Bindings\Adobe.ACPCore.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>

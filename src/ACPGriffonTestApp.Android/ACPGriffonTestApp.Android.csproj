@@ -57,13 +57,11 @@
     <Reference Include="Adobe.ACPLifecycle.Android">
       <HintPath>Bindings\Adobe.ACPLifecycle.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Adobe.ACPCore.Android">
-      <HintPath>..\Adobe.ACPGriffon.Android\Bindings\Adobe.ACPCore.Android.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="Adobe.ACPCore.Android" Version="0.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
