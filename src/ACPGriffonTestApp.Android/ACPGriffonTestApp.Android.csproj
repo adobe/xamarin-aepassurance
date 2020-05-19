@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
-    <Reference Include="Adobe.ACPIdentity.Android">
-      <HintPath>Bindings\Adobe.ACPIdentity.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Adobe.ACPLifecycle.Android">
-      <HintPath>Bindings\Adobe.ACPLifecycle.Android.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
