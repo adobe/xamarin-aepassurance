@@ -63,6 +63,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Adobe.ACPCore.iOS" Version="0.0.1" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="ACPGriffon.framework">
@@ -78,10 +79,6 @@
       <IsCxx>True</IsCxx>
       <Frameworks>UIKit SystemConfiguration</Frameworks>
       <LinkerFlags>-lc++ -lz</LinkerFlags>
-    </NativeReference>
-    <NativeReference Include="libACPCore_iOS.a">
-      <Kind>Static</Kind>
-      <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>
