@@ -40,9 +40,6 @@ The created NuGet packages can be found in the `bin` directory and can be added 
 
 ## Usage
 ### [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
-
-The following usage instructions assume [Xamarin Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms) is being used to develop a multiplatform mobile app.
-
 ##### Getting Griffon version:
 
 **iOS and Android**
