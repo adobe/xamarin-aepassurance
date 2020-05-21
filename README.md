@@ -1,7 +1,8 @@
 # Adobe Experience Platform - Griffon plugin for Xamarin apps
 
 ![CI](https://github.com/adobe/xamarin-acpgriffon/workflows/CI/badge.svg)
-
+[![NuGet](https://buildstats.info/nuget/Adobe.ACPGriffon.Android)](https://www.nuget.org/packages/Adobe.ACPGriffon.Android/)
+[![NuGet](https://buildstats.info/nuget/Adobe.ACPGriffon.iOS)](https://www.nuget.org/packages/Adobe.ACPGriffon.iOS/)
 [![GitHub](https://img.shields.io/github/license/adobe/xamarin-acpgriffon)](https://github.com/adobe/xamarin-acpgriffon/blob/master/LICENSE)
 
 - [Prerequisites](#prerequisites)
