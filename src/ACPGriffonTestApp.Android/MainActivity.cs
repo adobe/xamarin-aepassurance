@@ -54,8 +54,11 @@ namespace ACPGriffonTestApp.Droid
             // set log level
             ACPCore.LogLevel = LoggingMode.Verbose;
 
-            // register SDK extensions
+            // set application
             ACPCore.Application = this.Application;
+            // Set the activity in core using the bridge
+            ACPCoreBridge.SetCurrentActivity((Activity)Forms.Context);
+            // register SDK extensions
             ACPLifecycle.RegisterExtension();
             ACPIdentity.RegisterExtension();
             ACPGriffon.RegisterExtension();
