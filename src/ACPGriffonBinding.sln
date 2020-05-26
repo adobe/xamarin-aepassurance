@@ -90,4 +90,9 @@ Global
 		{DCFDE2E3-D172-4C08-8177-4F0EA95A7EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCFDE2E3-D172-4C08-8177-4F0EA95A7EFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$0.StandardHeader = $2
+	EndGlobalSection
 EndGlobal

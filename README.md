@@ -64,11 +64,22 @@ Console.WriteLine(ACPGriffon.ExtensionVersion());
 
 ##### Registering the extension with ACPCore:  
 
-  ##### **iOS** and Android
+  ##### **iOS**
 
 ```c#
 using Com.Adobe.Marketing.Mobile;
 
+ACPGriffon.RegisterExtension();
+ACPCore.Start(null);
+```
+
+  ##### Android
+
+```c#
+using Com.Adobe.Marketing.Mobile;
+
+// needed to correctly start a griffon session from within an app activity
+ACPCoreBridge.SetCurrentActivity((Activity)Forms.Context);
 ACPGriffon.RegisterExtension();
 ACPCore.Start(null);
 ```

@@ -10,7 +10,7 @@ written permission of Adobe. (See LICENSE-MIT in the root folder for details)
 */
 
 using System;
-
+using Com.Adobe.Marketing.Mobile;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -18,7 +18,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
-using Com.Adobe.Marketing.Mobile;
 
 namespace ACPGriffonTestApp.Droid
 {
