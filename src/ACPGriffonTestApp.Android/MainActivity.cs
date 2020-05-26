@@ -10,7 +10,7 @@ written permission of Adobe. (See LICENSE-MIT for details)
 */
 
 using System;
-
+using Com.Adobe.Marketing.Mobile;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -18,7 +18,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
-using Com.Adobe.Marketing.Mobile;
 
 namespace ACPGriffonTestApp.Droid
 {
@@ -54,8 +53,11 @@ namespace ACPGriffonTestApp.Droid
             // set log level
             ACPCore.LogLevel = LoggingMode.Verbose;
 
-            // register SDK extensions
+            // set application
             ACPCore.Application = this.Application;
+            // Set the activity in core using the bridge
+            ACPCoreBridge.SetCurrentActivity((Activity)Forms.Context);
+            // register SDK extensions
             ACPLifecycle.RegisterExtension();
             ACPIdentity.RegisterExtension();
             ACPGriffon.RegisterExtension();

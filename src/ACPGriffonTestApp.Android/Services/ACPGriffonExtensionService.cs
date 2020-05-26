@@ -14,13 +14,16 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.Runtime;
 using Com.Adobe.Marketing.Mobile;
+using System.Threading;
 
 namespace ACPGriffonTestApp.Droid
 {
     public class ACPGriffonExtensionService : IACPGriffonExtensionService
     {
         TaskCompletionSource<string> stringOutput;
+        private static CountdownEvent latch = null;
         private string sessionUrl = "";
+        private static string callbackString = "";
 
         public ACPGriffonExtensionService()
         {
@@ -36,9 +39,21 @@ namespace ACPGriffonTestApp.Droid
 
         public TaskCompletionSource<string> GetPrivacyStatus()
         {
+            latch = new CountdownEvent(1);
             stringOutput = new TaskCompletionSource<string>();
             ACPCore.GetPrivacyStatus(new StringCallback());
-            stringOutput.SetResult("completed");
+            latch.Wait(1000);
+            stringOutput.SetResult(callbackString);
+            return stringOutput;
+        }
+
+        public TaskCompletionSource<string> GetSDKIdentities()
+        {
+            latch = new CountdownEvent(1);
+            stringOutput = new TaskCompletionSource<string>();
+            ACPCore.GetSdkIdentities(new StringCallback());
+            latch.Wait(1000);
+            stringOutput.SetResult(callbackString);
             return stringOutput;
         }
 
@@ -91,7 +106,6 @@ namespace ACPGriffonTestApp.Droid
             stringOutput = new TaskCompletionSource<string>();
             var config = new Dictionary<string, Java.Lang.Object>();
             config.Add("someConfigKey", "configValue");
-            config.Add("analytics.batchLimit", 5);
             ACPCore.UpdateConfiguration(config);
             stringOutput.SetResult("completed");
             return stringOutput;
@@ -133,11 +147,15 @@ namespace ACPGriffonTestApp.Droid
             {
                 if (stringContent != null)
                 {
-                    Console.WriteLine("String callback content: " + stringContent);
+                    callbackString = stringContent.ToString();
                 }
                 else
                 {
-                    Console.WriteLine("null content in string callback");
+                    callbackString = "null content in string callback";
+                }
+                if (latch != null)
+                {
+                    latch.Signal();
                 }
             }
         }
