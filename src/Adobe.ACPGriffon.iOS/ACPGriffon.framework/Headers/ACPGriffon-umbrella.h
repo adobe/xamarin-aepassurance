@@ -12,3 +12,7 @@
 
 #import "ACPGriffon.h"
 #import "ACPGriffonEvent.h"
+
+FOUNDATION_EXPORT double ACPGriffonVersionNumber;
+FOUNDATION_EXPORT const unsigned char ACPGriffonVersionString[];
+
