@@ -1834,10 +1834,10 @@ namespace ACPGriffonAndroidUnitTests
 			public const int abc_vector_test = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int griffon_active = 2130837588;
+			public const int ic_griffon_active = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int griffon_inactive = 2130837589;
+			public const int ic_griffon_inactive = 2130837589;
 			
 			// aapt resource value: 0x7f020056
 			public const int notification_action_background = 2130837590;

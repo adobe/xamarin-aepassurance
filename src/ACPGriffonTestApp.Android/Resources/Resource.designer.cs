@@ -8301,10 +8301,10 @@ namespace ACPGriffonTestApp.Droid
 			public const int design_snackbar_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int griffon_active = 2131165282;
+			public const int ic_griffon_active = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int griffon_inactive = 2131165283;
+			public const int ic_griffon_inactive = 2131165283;
 			
 			// aapt resource value: 0x7F070064
 			public const int ic_mtrl_chip_checked_black = 2131165284;
