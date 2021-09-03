@@ -58,11 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.8</Version>
+      <Version>0.2.5-pr174.14</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Adobe.ACPCore.iOS" Version="0.0.1" />
+    <PackageReference Include="Adobe.ACPCore.iOS" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="..\..\LICENSE" Pack="true" PackagePath="">
