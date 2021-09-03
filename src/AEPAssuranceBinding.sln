@@ -126,5 +126,6 @@ Global
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$0.StandardHeader = $2
+		version = 1.0.0
 	EndGlobalSection
 EndGlobal

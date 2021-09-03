@@ -25,6 +25,7 @@ namespace AEPAssuranceAndroidUnitTests
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Android.NUnitLite.Resource.Id.CreditsButton = global::AEPAssuranceAndroidUnitTests.Resource.Id.CreditsButton;
 			global::Xamarin.Android.NUnitLite.Resource.Id.OptionHostName = global::AEPAssuranceAndroidUnitTests.Resource.Id.OptionHostName;
 			global::Xamarin.Android.NUnitLite.Resource.Id.OptionPort = global::AEPAssuranceAndroidUnitTests.Resource.Id.OptionPort;
 			global::Xamarin.Android.NUnitLite.Resource.Id.OptionRemoteServer = global::AEPAssuranceAndroidUnitTests.Resource.Id.OptionRemoteServer;
@@ -41,10 +42,12 @@ namespace AEPAssuranceAndroidUnitTests
 			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsPassed = global::AEPAssuranceAndroidUnitTests.Resource.Id.ResultsPassed;
 			global::Xamarin.Android.NUnitLite.Resource.Id.ResultsResult = global::AEPAssuranceAndroidUnitTests.Resource.Id.ResultsResult;
 			global::Xamarin.Android.NUnitLite.Resource.Id.ResultStackTrace = global::AEPAssuranceAndroidUnitTests.Resource.Id.ResultStackTrace;
+			global::Xamarin.Android.NUnitLite.Resource.Id.RunEverythingButton = global::AEPAssuranceAndroidUnitTests.Resource.Id.RunEverythingButton;
 			global::Xamarin.Android.NUnitLite.Resource.Id.RunTestsButton = global::AEPAssuranceAndroidUnitTests.Resource.Id.RunTestsButton;
 			global::Xamarin.Android.NUnitLite.Resource.Id.TestSuiteListView = global::AEPAssuranceAndroidUnitTests.Resource.Id.TestSuiteListView;
 			global::Xamarin.Android.NUnitLite.Resource.Layout.options = global::AEPAssuranceAndroidUnitTests.Resource.Layout.options;
 			global::Xamarin.Android.NUnitLite.Resource.Layout.results = global::AEPAssuranceAndroidUnitTests.Resource.Layout.results;
+			global::Xamarin.Android.NUnitLite.Resource.Layout.Runner = global::AEPAssuranceAndroidUnitTests.Resource.Layout.Runner;
 			global::Xamarin.Android.NUnitLite.Resource.Layout.test_result = global::AEPAssuranceAndroidUnitTests.Resource.Layout.test_result;
 			global::Xamarin.Android.NUnitLite.Resource.Layout.test_suite = global::AEPAssuranceAndroidUnitTests.Resource.Layout.test_suite;
 		}
@@ -1900,6 +1903,9 @@ namespace AEPAssuranceAndroidUnitTests
 			// aapt resource value: 0x7f0b0027
 			public const int CTRL = 2131427367;
 			
+			// aapt resource value: 0x7f0b0092
+			public const int CreditsButton = 2131427474;
+			
 			// aapt resource value: 0x7f0b0028
 			public const int FUNCTION = 2131427368;
 			
@@ -1915,23 +1921,23 @@ namespace AEPAssuranceAndroidUnitTests
 			// aapt resource value: 0x7f0b0085
 			public const int OptionRemoteServer = 2131427461;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int OptionsButton = 2131427477;
-			
-			// aapt resource value: 0x7f0b0090
-			public const int ResultFullName = 2131427472;
-			
-			// aapt resource value: 0x7f0b0092
-			public const int ResultMessage = 2131427474;
-			
 			// aapt resource value: 0x7f0b0091
-			public const int ResultResultState = 2131427473;
+			public const int OptionsButton = 2131427473;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int ResultRunSingleMethodTest = 2131427471;
+			// aapt resource value: 0x7f0b0094
+			public const int ResultFullName = 2131427476;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int ResultMessage = 2131427478;
+			
+			// aapt resource value: 0x7f0b0095
+			public const int ResultResultState = 2131427477;
 			
 			// aapt resource value: 0x7f0b0093
-			public const int ResultStackTrace = 2131427475;
+			public const int ResultRunSingleMethodTest = 2131427475;
+			
+			// aapt resource value: 0x7f0b0097
+			public const int ResultStackTrace = 2131427479;
 			
 			// aapt resource value: 0x7f0b008b
 			public const int ResultsFailed = 2131427467;
@@ -1954,8 +1960,11 @@ namespace AEPAssuranceAndroidUnitTests
 			// aapt resource value: 0x7f0b0089
 			public const int ResultsResult = 2131427465;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int RunTestsButton = 2131427476;
+			// aapt resource value: 0x7f0b0090
+			public const int RunEverythingButton = 2131427472;
+			
+			// aapt resource value: 0x7f0b0098
+			public const int RunTestsButton = 2131427480;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int SHIFT = 2131427370;
@@ -1963,8 +1972,8 @@ namespace AEPAssuranceAndroidUnitTests
 			// aapt resource value: 0x7f0b002b
 			public const int SYM = 2131427371;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int TestSuiteListView = 2131427478;
+			// aapt resource value: 0x7f0b008f
+			public const int TestSuiteListView = 2131427471;
 			
 			// aapt resource value: 0x7f0b0067
 			public const int action_bar = 2131427431;
@@ -2497,22 +2506,25 @@ namespace AEPAssuranceAndroidUnitTests
 			public const int results = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int select_dialog_item_material = 2130968612;
+			public const int Runner = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int select_dialog_multichoice_material = 2130968613;
+			public const int select_dialog_item_material = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int select_dialog_singlechoice_material = 2130968614;
+			public const int select_dialog_multichoice_material = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int support_simple_spinner_dropdown_item = 2130968615;
+			public const int select_dialog_singlechoice_material = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int test_result = 2130968616;
+			public const int support_simple_spinner_dropdown_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int test_suite = 2130968617;
+			public const int test_result = 2130968617;
+			
+			// aapt resource value: 0x7f04002a
+			public const int test_suite = 2130968618;
 			
 			static Layout()
 			{
