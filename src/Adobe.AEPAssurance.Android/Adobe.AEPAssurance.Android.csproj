@@ -78,13 +78,19 @@
         </PackageReference>
         <PackageReference Include="Adobe.ACPCore.Android" Version="1.0.0" />
         <PackageReference Include="Adobe.ACPCoreBridge.Android" Version="0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
+          <Version>1.1.2</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.AndroidX.ConstraintLayout">
+          <Version>2.0.2</Version>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Jars\" />
       <Folder Include="Additions\" />
     </ItemGroup>
     <ItemGroup>
-      <LibraryProjectZip Include="Jars\assurance-1.0.0.aar" />
+      <LibraryProjectZip Include="Jars\assurance-1.0.3.aar" />
     </ItemGroup>
     <Import Project="\Library\Frameworks\Xamarin.Android.framework\Libraries\xamarin.android\xbuild\Xamarin\Android\Xamarin.Android.Bindings.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

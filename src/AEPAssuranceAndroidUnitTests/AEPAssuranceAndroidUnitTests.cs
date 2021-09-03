@@ -23,7 +23,7 @@ namespace AEPAssuranceAndroidUnitTests
         public void GetACPGriffonExtensionVersion_Returns_CorrectVersion()
         {
             // verify
-            Assert.That(AEPAssurance.ExtensionVersion(), Is.EqualTo("1.0.0"));
+            Assert.That(AEPAssurance.ExtensionVersion(), Is.EqualTo("1.0.3"));
         }
     }
 }
