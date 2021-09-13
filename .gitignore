@@ -340,3 +340,5 @@ src/ACPGriffonTestApp.Android/Assets/AboutAssets.txt
 src/ACPGriffonTestApp.Android/Resources/AboutResources.txt
 src/ACPGriffonAndroidUnitTests/Assets/AboutAssets.txt
 src/ACPGriffonAndroidUnitTests/Resources/AboutResources.txt
+
+acp-sdk/
