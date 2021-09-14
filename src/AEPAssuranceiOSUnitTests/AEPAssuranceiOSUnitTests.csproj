@@ -9,6 +9,7 @@
     <RootNamespace>AEPAssuranceiOSUnitTests</RootNamespace>
     <AssemblyName>AEPAssuranceiOSUnitTests</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,7 +101,7 @@
     <Compile Include="AEPAssuranceiOSUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Adobe.ACPCore.iOS" Version="0.0.1" />
+    <PackageReference Include="Adobe.ACPCore.iOS" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Adobe.AEPAssurance.iOS\Adobe.AEPAssurance.iOS.csproj">

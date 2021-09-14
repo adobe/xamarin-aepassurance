@@ -23,7 +23,7 @@ namespace AEPAssuranceiOSUnitTests
         public void GetAEPAssuranceExtensionVersion_Returns_CorrectVersion()
         {
             // verify
-            Assert.That(AEPAssurance.ExtensionVersion(), Is.EqualTo("1.0.0"));
+            Assert.That(AEPAssurance.ExtensionVersion(), Is.EqualTo("1.1.3"));
         }
     }
 }
